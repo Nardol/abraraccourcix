@@ -3,6 +3,9 @@
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
+# To generate automatically the version number
+import time
+
 # Full getext (please don't change)
 _ = lambda x : x
 
@@ -20,7 +23,7 @@ addon_info = {
 	"addon_description" : _(u"""Add these keyboard shortcuts to NVDA:
 - Pose: close the active window."""),
 	# version
-	"addon_version" : "1.1",
+	"addon_version" : time.strftime("%Y%m%d%H%M%S", time.localtime()),
 	# Author(s)
 	"addon_author" : u"Patrick ZAJDA <patrick@zajda.fr>, Antoine Alfonsi, Philippe Briffault and other contributors",
 	# URL for the add-on documentation support
